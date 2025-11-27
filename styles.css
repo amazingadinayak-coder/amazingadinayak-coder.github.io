@@ -241,20 +241,25 @@ a:hover {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
-    width: 0;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+    width: var(--spacing-lg);
     height: 3px;
     background: linear-gradient(90deg, var(--accent), var(--primary));
-    animation: expandBar 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: expandBar 1s ease-out forwards;
 }
 
 @keyframes expandBar {
     0% {
-        width: 0;
+        transform: translateY(-50%) scaleX(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(-50%) scaleX(1);
         opacity: 1;
     }
     100% {
-        width: var(--spacing-lg);
+        transform: translateY(-50%) scaleX(0);
         opacity: 0;
     }
 }
