@@ -226,6 +226,23 @@ a:hover {
     margin-bottom: var(--spacing-xl);
 }
 
+.animate-in {
+    display: inline-block;
+    position: relative;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-buttons {
     display: flex;
     gap: var(--spacing-md);
