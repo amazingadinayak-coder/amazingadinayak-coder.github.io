@@ -232,44 +232,28 @@ a:hover {
 
 .animated-text {
     position: relative;
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
+    padding-left: var(--spacing-lg);
 }
 
 .animated-text::before {
     content: '';
     position: absolute;
-    left: -var(--spacing-lg);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(90deg, var(--accent), var(--primary));
-    animation: expandBar 0.8s ease-out forwards;
-}
-
-.animated-text::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: var(--background);
-    animation: revealText 0.8s ease-out forwards;
-    z-index: 1;
+    animation: expandBar 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes expandBar {
-    from {
+    0% {
         width: 0;
     }
-    to {
+    100% {
         width: var(--spacing-lg);
-    }
-}
-
-@keyframes revealText {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0;
     }
 }
 
