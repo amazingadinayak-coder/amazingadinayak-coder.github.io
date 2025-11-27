@@ -243,7 +243,7 @@ a:hover {
     width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--accent), var(--primary));
-    animation: slideUnderline 0.8s ease-out forwards;
+    animation: slideUnderline 0.8s ease-out both;
 }
 
 @keyframes slideUnderline {
