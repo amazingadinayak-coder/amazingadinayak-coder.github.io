@@ -251,9 +251,11 @@ a:hover {
 @keyframes expandBar {
     0% {
         width: 0;
+        opacity: 1;
     }
     100% {
         width: var(--spacing-lg);
+        opacity: 0;
     }
 }
 
