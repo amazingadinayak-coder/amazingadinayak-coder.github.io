@@ -233,33 +233,30 @@ a:hover {
 .animated-text {
     position: relative;
     display: inline-block;
-    padding-left: var(--spacing-lg);
 }
 
-.animated-text::before {
+.animated-text::after {
     content: '';
     position: absolute;
+    bottom: -8px;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%) scaleX(0);
-    transform-origin: left center;
-    width: var(--spacing-lg);
+    width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--accent), var(--primary));
-    animation: expandBar 1s ease-out forwards;
+    animation: slideUnderline 0.8s ease-out forwards;
 }
 
-@keyframes expandBar {
+@keyframes slideUnderline {
     0% {
-        transform: translateY(-50%) scaleX(0);
+        width: 0;
         opacity: 1;
     }
-    70% {
-        transform: translateY(-50%) scaleX(1);
+    60% {
+        width: 100%;
         opacity: 1;
     }
     100% {
-        transform: translateY(-50%) scaleX(0);
+        width: 100%;
         opacity: 0;
     }
 }
