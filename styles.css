@@ -116,15 +116,34 @@ a:hover {
 }
 
 .logo {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    transition: color var(--transition);
+    display: flex;
+    align-items: center;
 }
 
-.logo:hover {
-    color: var(--secondary);
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.logo-svg {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.logo-text {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.logo-link:hover .logo-text {
+    color: var(--primary);
 }
 
 .nav-links {
