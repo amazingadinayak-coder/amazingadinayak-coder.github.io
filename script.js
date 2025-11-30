@@ -155,3 +155,20 @@ style.textContent = `
 document.head.appendChild(style);
 
 console.log('Website loaded successfully! 🚀');
+
+// Small nudge on first load so header/icons aren't cut off
+window.addEventListener('load', () => {
+    // don't nudge if there's a hash (intentional anchor) or user scrolled
+    if (location.hash) return;
+    if (window.scrollY === 0) {
+        // slight delay so layout and sticky header are settled
+        setTimeout(() => {
+            try {
+                window.scrollBy({ top: 12, left: 0, behavior: 'smooth' });
+            } catch (e) {
+                // fallback
+                window.scrollBy(0, 12);
+            }
+        }, 120);
+    }
+});
