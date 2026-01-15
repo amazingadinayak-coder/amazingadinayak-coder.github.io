@@ -1,4 +1,4 @@
-# Personal Website Design Template
+# Personal Website Design Template (yay)
 
 ## 1. Brand Identity
 
@@ -34,7 +34,7 @@
 
 - Brief introduction/tagline
 - Profile image/avatar
-- Social media links
+- Social media links 
 
 ### Main Sections
 
